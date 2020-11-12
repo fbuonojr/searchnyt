@@ -35,4 +35,25 @@ function updatePage(NYTData) {
 
     console.log(NYTData);
     console.log("-----------------------------");
+
+    for(var i = 0; i < numArticles; i++){
+        var article = NYTData.response.docs[i];
+
+        var articleCount = i + 1;
+
+        var $articleList = $("<ul>");
+        $articleList.addClass("list-group");
+
+        $("#article-section").append($articleList);
+
+        var headline = article.headline;
+        var $articleListItem = $("<li class='list-group-item articleHeadline'>");
+
+        if(headline && headline.main){
+            console.log(headline.main);
+            $articleListItem.append(
+                "<span class='"
+            )
+        }
+    }
 }
