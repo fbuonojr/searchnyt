@@ -20,4 +20,9 @@ function buildQueryURl() {
     if(parseInt(endYear)){
         queryParams.end_date = endYear + "0101";
     }
+
+    console.log("---------------\nURL: " + queryURL + "\n---------------");
+    console.log(queryURL + $.param(queryParams));
+  return queryURL + $.param(queryParams);
+
 }
