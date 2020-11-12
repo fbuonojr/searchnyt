@@ -25,3 +25,14 @@ function buildQueryURL() {
     console.log(queryURL + $.param(queryParams));
     return queryURL + $.param(queryParams);
 }
+
+/**
+ * this function prints the data from the api call onto the page
+ * @param {object} NYTData
+ */
+function updatePage(NYTData) {
+    var numArticles = $("#article-count").val();
+
+    console.log(NYTData);
+    console.log("-----------------------------");
+}
