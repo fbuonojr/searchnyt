@@ -80,3 +80,8 @@ function updatePage(NYTData) {
         $articleList.append($articleListItem);
     }
 }
+
+//this function clears the article results
+function clear() {
+    $("#article-section").empty();
+}
