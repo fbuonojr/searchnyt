@@ -1,13 +1,9 @@
-# Project Name
+# NYT Api Search
 
-#### Technologies used: 
+#### Technologies used: JavaScript, jQuery, HTML, CSS, Bootstrap
 
-This application does . . . . .
+This application uses the NYT API to pull up relevant articles based on the search.
 
-How to use
-
-* link to deployed application:
-
-![](./images/)
+* link to deployed application: https://fbuonojr.github.io/searchnyt/
 
 ###### Frank Buono- this app was created as practice using an activity from my bootcamp class
