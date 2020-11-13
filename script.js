@@ -52,8 +52,31 @@ function updatePage(NYTData) {
         if(headline && headline.main){
             console.log(headline.main);
             $articleListItem.append(
-                "<span class='"
-            )
+                "<span class='label label-primary'>" + articleCount + "</span>" + "<strong>" + headline.main + "</strong>"
+            );
         }
+
+        var byline = article.byline;
+        if(byline && byline.original){
+            console.log(byline.original);
+            $articleListItem.append("<h5>" + byline.original + "</h5>");
+        }
+
+        var section = article.section_name;
+        console.log(article.section_name);
+        if(section){
+            $articleListItem.append("<h5>Section: " + section + "</h5>");
+        }
+
+        var pubDate = article.pub_date;
+        console.log(article.pubDate);
+        if(pubDate){
+            $articleListItem.append("<h5>" + article.pubDate + "</h5>");
+        }
+
+        $articleListItem.append("<a href-'" + article.web_url + "'>" + article.web_url + "</a>");
+        console.log(article.web_url);
+
+        $articleList.append($articleListItem);
     }
 }
