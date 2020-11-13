@@ -52,7 +52,7 @@ function updatePage(NYTData) {
         if(headline && headline.main){
             console.log(headline.main);
             $articleListItem.append(
-                "<span class='label label-primary'>" + articleCount + "</span>" + "<strong>" + headline.main + "</strong>"
+                "<span class='label label-primary'>" + articleCount + ": </span>" + "<strong>" + headline.main + "</strong>"
             );
         }
 
@@ -69,12 +69,12 @@ function updatePage(NYTData) {
         }
 
         var pubDate = article.pub_date;
-        console.log(article.pubDate);
+        console.log(article.pub_date);
         if(pubDate){
-            $articleListItem.append("<h5>" + article.pubDate + "</h5>");
+            $articleListItem.append("<h5>" + article.pub_date + "</h5>");
         }
 
-        $articleListItem.append("<a href-'" + article.web_url + "'>" + article.web_url + "</a>");
+        $articleListItem.append("<a href='" + article.web_url + "'>" + article.web_url + "</a>");
         console.log(article.web_url);
 
         $articleList.append($articleListItem);
