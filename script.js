@@ -98,3 +98,5 @@ $("#run-search").on("click", function(event){
         method: "GET"
     }).then(updatePage);
 });
+
+$("#clear-all").on("click", clear);
