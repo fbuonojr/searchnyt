@@ -85,3 +85,16 @@ function updatePage(NYTData) {
 function clear() {
     $("#article-section").empty();
 }
+
+$("#run-search").on("click", function(event){
+    event.preventDefault();
+
+    clear();
+
+    var queryURL = buildQueryURL();
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(updatePage);
+});
